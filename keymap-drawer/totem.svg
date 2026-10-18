@@ -133,6 +133,13 @@ text.right-hand.br { fill: #b0179a; }
 text.left-hand.tr { fill: #1f5fd1; }
 text.left-hand.right { fill: #1a8a1a; }
 text.left-hand.br { fill: #d1281f; }
+/* thumb layer keys: label in the same color as the layer's legends */
+text.layer-nav.bl { fill: #b08800; font-weight: bold; }
+text.layer-mouse.bl { fill: #0a8a8a; font-weight: bold; }
+text.layer-media.bl { fill: #b0179a; font-weight: bold; }
+text.layer-num.bl { fill: #1f5fd1; font-weight: bold; }
+text.layer-sym.bl { fill: #1a8a1a; font-weight: bold; }
+text.layer-fun.bl { fill: #d1281f; font-weight: bold; }
 </style>
 <g transform="translate(30, 0)" class="layer-TOTEM">
 <text x="0" y="28" class="label" id="TOTEM">TOTEM:</text>
@@ -185,7 +192,6 @@ text.left-hand.br { fill: #d1281f; }
 <text x="35" y="0" class="key right-hand right">REDO</text>
 <text x="-35" y="-33" class="key right-hand tl">ㅛ</text>
 <text x="35" y="-33" class="key right-hand tr">REDO</text>
-<text x="35" y="33" class="key right-hand br">BT0</text>
 </g>
 <g transform="translate(766, 74)" class="key right-hand keypos-6">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
@@ -193,7 +199,7 @@ text.left-hand.br { fill: #d1281f; }
 <text x="35" y="0" class="key right-hand right">PASTE</text>
 <text x="-35" y="-33" class="key right-hand tl">ㅓ</text>
 <text x="35" y="-33" class="key right-hand tr">PASTE</text>
-<text x="35" y="33" class="key right-hand br">BT1</text>
+<text x="35" y="33" class="key right-hand br">HAN</text>
 </g>
 <g transform="translate(844, 37)" class="key right-hand keypos-7">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
@@ -201,7 +207,6 @@ text.left-hand.br { fill: #d1281f; }
 <text x="35" y="0" class="key right-hand right">COPY</text>
 <text x="-35" y="-33" class="key right-hand tl">ㅕ</text>
 <text x="35" y="-33" class="key right-hand tr">COPY</text>
-<text x="35" y="33" class="key right-hand br">BT2</text>
 </g>
 <g transform="translate(934, 82) rotate(4.0)" class="key right-hand keypos-8">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
@@ -209,7 +214,6 @@ text.left-hand.br { fill: #d1281f; }
 <text x="35" y="0" class="key right-hand right">CUT</text>
 <text x="-35" y="-33" class="key right-hand tl">ㅑ</text>
 <text x="35" y="-33" class="key right-hand tr">CUT</text>
-<text x="35" y="33" class="key right-hand br">BT3</text>
 </g>
 <g transform="translate(1022, 149) rotate(10.0)" class="key right-hand keypos-9">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
@@ -218,7 +222,7 @@ text.left-hand.br { fill: #d1281f; }
 <text x="-35" y="-33" class="key right-hand tl">ㅠ</text>
 <text x="35" y="-33" class="key right-hand tr">UNDO</text>
 <text x="-35" y="33" class="key right-hand bl">BOOT</text>
-<text x="35" y="33" class="key right-hand br">BT4</text>
+<text x="35" y="33" class="key right-hand br">BTCLR</text>
 </g>
 <g transform="translate(115, 222) rotate(-10.0)" class="key left-hand keypos-10">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key left-hand"/>
@@ -306,7 +310,6 @@ text.left-hand.br { fill: #d1281f; }
 <text x="-35" y="-33" class="key right-hand tl">ㅜ</text>
 <text x="35" y="-33" class="key right-hand tr">CAPS</text>
 <text x="-35" y="33" class="key right-hand bl">ALT</text>
-<text x="35" y="33" class="key right-hand br">OUT</text>
 </g>
 <g transform="translate(45, 276) rotate(-10.0)" class="key left-hand keypos-20">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key left-hand"/>
@@ -358,7 +361,7 @@ text.left-hand.br { fill: #d1281f; }
 <text x="35" y="0" class="key right-hand right">WH_L</text>
 <text x="-35" y="-33" class="key right-hand tl">ㅐ</text>
 <text x="35" y="-33" class="key right-hand tr">HOME</text>
-<text x="35" y="33" class="key right-hand br">BRI-</text>
+<text x="35" y="33" class="key right-hand br">BT0</text>
 </g>
 <g transform="translate(766, 222)" class="key right-hand keypos-27">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
@@ -366,73 +369,74 @@ text.left-hand.br { fill: #d1281f; }
 <text x="35" y="0" class="key right-hand right">WH_D</text>
 <text x="-35" y="-33" class="key right-hand tl">ㅔ</text>
 <text x="35" y="-33" class="key right-hand tr">PGDN</text>
-<text x="35" y="33" class="key right-hand br">BRI+</text>
+<text x="35" y="33" class="key right-hand br">BT1</text>
 </g>
 <g transform="translate(844, 185)" class="key right-hand keypos-28">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
 <text x="-10" y="0" class="key right-hand tap">,</text>
 <text x="35" y="0" class="key right-hand right">WH_U</text>
 <text x="35" y="-33" class="key right-hand tr">PGUP</text>
-<text x="35" y="33" class="key right-hand br">HAN</text>
+<text x="35" y="33" class="key right-hand br">BT2</text>
 </g>
 <g transform="translate(923, 229) rotate(4.0)" class="key right-hand keypos-29">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
 <text x="-10" y="0" class="key right-hand tap">.</text>
 <text x="35" y="0" class="key right-hand right">WH_R</text>
 <text x="35" y="-33" class="key right-hand tr">END</text>
+<text x="35" y="33" class="key right-hand br">BT3</text>
 </g>
 <g transform="translate(996, 295) rotate(10.0)" class="key right-hand keypos-30">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
 <text x="-10" y="0" class="key right-hand tap">/</text>
 <text x="35" y="-33" class="key right-hand tr">INS</text>
+<text x="35" y="33" class="key right-hand br">OUT</text>
 </g>
 <g transform="translate(1079, 276) rotate(10.0)" class="key right-hand keypos-31">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
 <text x="-10" y="0" class="key right-hand tap">KOR</text>
-<text x="35" y="33" class="key right-hand br">BTCLR</text>
 </g>
-<g transform="translate(336, 312)" class="key left-hand keypos-32">
-<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key left-hand"/>
-<text x="-10" y="0" class="key left-hand tap">ESC</text>
-<text x="35" y="0" class="key left-hand right">(</text>
-<text x="35" y="-33" class="key left-hand tr">.</text>
-<text x="-35" y="33" class="key left-hand bl">Media</text>
-<text x="35" y="33" class="key left-hand br">APP</text>
+<g transform="translate(336, 312)" class="key left-hand layer-media keypos-32">
+<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key left-hand layer-media"/>
+<text x="-10" y="0" class="key left-hand layer-media tap">ESC</text>
+<text x="35" y="0" class="key left-hand layer-media right">(</text>
+<text x="35" y="-33" class="key left-hand layer-media tr">.</text>
+<text x="-35" y="33" class="key left-hand layer-media bl">Media</text>
+<text x="35" y="33" class="key left-hand layer-media br">APP</text>
 </g>
-<g transform="translate(423, 324) rotate(15.0)" class="key left-hand keypos-33">
-<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key left-hand"/>
-<text x="-10" y="0" class="key left-hand tap">SPC</text>
-<text x="35" y="0" class="key left-hand right">)</text>
-<text x="35" y="-33" class="key left-hand tr">0</text>
-<text x="-35" y="33" class="key left-hand bl">Nav</text>
+<g transform="translate(423, 324) rotate(15.0)" class="key left-hand layer-nav keypos-33">
+<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key left-hand layer-nav"/>
+<text x="-10" y="0" class="key left-hand layer-nav tap">SPC</text>
+<text x="35" y="0" class="key left-hand layer-nav right">)</text>
+<text x="35" y="-33" class="key left-hand layer-nav tr">0</text>
+<text x="-35" y="33" class="key left-hand layer-nav bl">Nav</text>
 </g>
-<g transform="translate(503, 357) rotate(30.0)" class="key left-hand keypos-34">
-<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key left-hand"/>
-<text x="-10" y="0" class="key left-hand tap">TAB</text>
-<text x="35" y="0" class="key left-hand right">_</text>
-<text x="35" y="-33" class="key left-hand tr">-</text>
-<text x="-35" y="33" class="key left-hand bl">Mouse</text>
+<g transform="translate(503, 357) rotate(30.0)" class="key left-hand layer-mouse keypos-34">
+<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key left-hand layer-mouse"/>
+<text x="-10" y="0" class="key left-hand layer-mouse tap">TAB</text>
+<text x="35" y="0" class="key left-hand layer-mouse right">_</text>
+<text x="35" y="-33" class="key left-hand layer-mouse tr">-</text>
+<text x="-35" y="33" class="key left-hand layer-mouse bl">Mouse</text>
 </g>
-<g transform="translate(621, 357) rotate(-30.0)" class="key right-hand keypos-35">
-<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
-<text x="-10" y="0" class="key right-hand tap">ENT</text>
-<text x="35" y="0" class="key right-hand right">RCLK</text>
-<text x="-35" y="33" class="key right-hand bl">Sym</text>
-<text x="35" y="33" class="key right-hand br">STOP</text>
+<g transform="translate(621, 357) rotate(-30.0)" class="key right-hand layer-sym keypos-35">
+<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand layer-sym"/>
+<text x="-10" y="0" class="key right-hand layer-sym tap">ENT</text>
+<text x="35" y="0" class="key right-hand layer-sym right">RCLK</text>
+<text x="-35" y="33" class="key right-hand layer-sym bl">Sym</text>
+<text x="35" y="33" class="key right-hand layer-sym br">STOP</text>
 </g>
-<g transform="translate(701, 324) rotate(-15.0)" class="key right-hand keypos-36">
-<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
-<text x="-10" y="0" class="key right-hand tap">BSPC</text>
-<text x="35" y="0" class="key right-hand right">LCLK</text>
-<text x="-35" y="33" class="key right-hand bl">Num</text>
-<text x="35" y="33" class="key right-hand br">PLAY</text>
+<g transform="translate(701, 324) rotate(-15.0)" class="key right-hand layer-num keypos-36">
+<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand layer-num"/>
+<text x="-10" y="0" class="key right-hand layer-num tap">BSPC</text>
+<text x="35" y="0" class="key right-hand layer-num right">LCLK</text>
+<text x="-35" y="33" class="key right-hand layer-num bl">Num</text>
+<text x="35" y="33" class="key right-hand layer-num br">PLAY</text>
 </g>
-<g transform="translate(788, 312)" class="key right-hand keypos-37">
-<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
-<text x="-10" y="0" class="key right-hand tap">DEL</text>
-<text x="35" y="0" class="key right-hand right">MCLK</text>
-<text x="-35" y="33" class="key right-hand bl">Fun</text>
-<text x="35" y="33" class="key right-hand br">MUTE</text>
+<g transform="translate(788, 312)" class="key right-hand layer-fun keypos-37">
+<rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand layer-fun"/>
+<text x="-10" y="0" class="key right-hand layer-fun tap">DEL</text>
+<text x="35" y="0" class="key right-hand layer-fun right">MCLK</text>
+<text x="-35" y="33" class="key right-hand layer-fun bl">Fun</text>
+<text x="35" y="33" class="key right-hand layer-fun br">MUTE</text>
 </g>
 </g>
 </g>
