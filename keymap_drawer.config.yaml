@@ -51,8 +51,6 @@ parse_config:
     "&kp C_NEXT": NEXT
     "&kp C_VOL_UP": VOL+
     "&kp C_VOL_DN": VOL-
-    "&kp C_BRI_UP": BRI+
-    "&kp C_BRI_DN": BRI-
     "&kp K_APP": APP
     "&kp SLCK": SLCK
     "&kp INS": INS
@@ -66,7 +64,6 @@ parse_config:
     "&bt BT_SEL 1": BT1
     "&bt BT_SEL 2": BT2
     "&bt BT_SEL 3": BT3
-    "&bt BT_SEL 4": BT4
 
 draw_config:
   key_w: 90
@@ -91,4 +88,11 @@ draw_config:
     text.left-hand.tr { fill: #1f5fd1; }
     text.left-hand.right { fill: #1a8a1a; }
     text.left-hand.br { fill: #d1281f; }
+    /* thumb layer keys: label in the same color as the layer's legends */
+    text.layer-nav.bl { fill: #b08800; font-weight: bold; }
+    text.layer-mouse.bl { fill: #0a8a8a; font-weight: bold; }
+    text.layer-media.bl { fill: #b0179a; font-weight: bold; }
+    text.layer-num.bl { fill: #1f5fd1; font-weight: bold; }
+    text.layer-sym.bl { fill: #1a8a1a; font-weight: bold; }
+    text.layer-fun.bl { fill: #d1281f; font-weight: bold; }
   footer_text: "center: Base · top-left: Korean (두줄이) · bottom-left: hold · right hand: Nav / Mouse / Media · left hand: Num / Sym / Fun"

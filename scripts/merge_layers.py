@@ -56,8 +56,11 @@ def base_key(key, pos: int) -> dict:
     hand_type = "left-hand" if pos in LEFT_HAND else "right-hand"
     if isinstance(key, str):
         return {"t": key, "type": hand_type}
+    hold = key.get("h", "")
+    # thumb layer keys get a layer-<name> class so their label uses that layer's color
+    layer_class = f" layer-{hold.lower()}" if hold in LAYER_SLOTS else ""
     # hold legends go bottom-left so they do not collide with the bottom-right layer legend
-    return {"t": key.get("t", ""), "bl": key.get("h", ""), "type": hand_type}
+    return {"t": key.get("t", ""), "bl": hold, "type": hand_type + layer_class}
 
 
 def with_legend(key: dict, slot: str, legend: str) -> dict:
