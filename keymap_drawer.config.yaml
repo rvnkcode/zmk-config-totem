@@ -1,0 +1,94 @@
+# keymap-drawer config for the TOTEM keymap drawing (read by .github/workflows/draw-keymap.yml).
+# Only raw_binding_map is set: setting zmk_keycode_map would replace keymap-drawer's
+# default symbol map instead of extending it.
+parse_config:
+  raw_binding_map:
+    "&kp LGUI": GUI
+    "&kp LALT": ALT
+    "&kp LCTRL": CTRL
+    "&kp LSHFT": SHIFT
+    "&hml LALT A": {t: A, h: ALT}
+    "&hml LGUI R": {t: R, h: GUI}
+    "&hml LCTRL S": {t: S, h: CTRL}
+    "&hml LSHFT T": {t: T, h: SHIFT}
+    "&hmr RSHFT N": {t: N, h: SHIFT}
+    "&hmr LCTRL E": {t: E, h: CTRL}
+    "&hmr RGUI I": {t: I, h: GUI}
+    "&hmr LALT O": {t: O, h: ALT}
+    # Clipboard keys (U_* macros are expanded by the keymap preprocessor)
+    "&kp U_UND": UNDO
+    "&kp U_CUT": CUT
+    "&kp U_CPY": COPY
+    "&kp U_PST": PASTE
+    "&kp U_RDO": REDO
+    "&kp IME_SWITCH": HAN
+    "&caps_word": CAPW
+    "&kp CAPS": CAPS
+    "&td_boot": BOOT
+    "&kp LA(F4)": Alt+F4
+    "&kp LG(Q)": Cmd+Q
+    "&kp LC(GRAVE)": Ctrl+`
+    "&mkp LCLK": LCLK
+    "&mkp RCLK": RCLK
+    "&mkp MCLK": MCLK
+    "&mmv MOVE_LEFT": MS_L
+    "&mmv MOVE_DOWN": MS_D
+    "&mmv MOVE_UP": MS_U
+    "&mmv MOVE_RIGHT": MS_R
+    "&msc SCRL_LEFT": WH_L
+    "&msc SCRL_DOWN": WH_D
+    "&msc SCRL_UP": WH_U
+    "&msc SCRL_RIGHT": WH_R
+    "&mo ACCEL": ACCEL
+    "&kp PAUSE_BREAK": PAUS
+    "&kp PSCRN": PSCR
+    "&kp PG_DN": PGDN
+    "&kp PG_UP": PGUP
+    "&kp C_PP": PLAY
+    "&kp C_STOP": STOP
+    "&kp C_MUTE": MUTE
+    "&kp C_PREV": PREV
+    "&kp C_NEXT": NEXT
+    "&kp C_VOL_UP": VOL+
+    "&kp C_VOL_DN": VOL-
+    "&kp C_BRI_UP": BRI+
+    "&kp C_BRI_DN": BRI-
+    "&kp K_APP": APP
+    "&kp SLCK": SLCK
+    "&kp INS": INS
+    "&kp RET": ENT
+    "&kp SPACE": SPC
+    "&tog MAC": MAC
+    "&tog KOR": KOR
+    "&out OUT_TOG": OUT
+    "&bt BT_CLR": BTCLR
+    "&bt BT_SEL 0": BT0
+    "&bt BT_SEL 1": BT1
+    "&bt BT_SEL 2": BT2
+    "&bt BT_SEL 3": BT3
+    "&bt BT_SEL 4": BT4
+
+draw_config:
+  key_w: 90
+  key_h: 74
+  split_gap: 50
+  # move the Base legend left so the right-side layer legend has room
+  legend_rel_x: -10
+  # draw combos as small diagrams under the keyboard instead of boxes over the keys
+  separate_combo_diagrams: true
+  combo_diagrams_scale: 4
+  # One color per layer, Miryoku style. Legend slots are assigned by scripts/merge_layers.py:
+  #   center = Base, top-left = Korean, bottom-left = Base hold and same-hand extras
+  #   right-hand keys: top-right = Nav, right = Mouse, bottom-right = Media
+  #   left-hand keys:  top-right = Num, right = Sym,   bottom-right = Fun
+  svg_extra_style: |
+    text.tl, text.tr, text.bl, text.br, text.left, text.right { font-size: 11px; }
+    text.tl { fill: #8a5a00; }
+    text.bl { fill: #6e6e6e; }
+    text.right-hand.tr { fill: #b08800; }
+    text.right-hand.right { fill: #0a8a8a; }
+    text.right-hand.br { fill: #b0179a; }
+    text.left-hand.tr { fill: #1f5fd1; }
+    text.left-hand.right { fill: #1a8a1a; }
+    text.left-hand.br { fill: #d1281f; }
+  footer_text: "center: Base · top-left: Korean (두줄이) · bottom-left: hold · right hand: Nav / Mouse / Media · left hand: Num / Sym / Fun"
