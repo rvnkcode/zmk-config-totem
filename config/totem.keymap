@@ -100,6 +100,14 @@
             tapping-term-ms = <200>;
             bindings = <&none>, <&bootloader>;
         };
+
+        // Double tap to clear the current BT profile, single tap does nothing
+        td_bt_clr: tap_dance_bt_clear {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&bt BT_CLR>;
+        };
     };
 
 
@@ -218,14 +226,14 @@
             >;
         };
 
-        // Right hand follows Miryoku MEDIA (VI). The top row replaces Miryoku's RGB keys
-        // (TOTEM has no RGB) with BT_CLR (pinky, away from the index); the input source switch
-        // sits on the home row pinky;
+        // Right hand follows Miryoku MEDIA (VI). The top row leaves Miryoku's RGB keys out
+        // (TOTEM has no RGB); the input source switch sits on the home row pinky.
+        // BT_CLR is a left hand double tap so reaching for the input source switch cannot clear a profile;
         // the external power toggle is left out (no ext-power on XIAO).
         media {
             display-name = "Media";
             bindings = <
-                       &td_boot        &tog MAC       &none            &none            &none             &none          &none            &none            &none           &bt BT_CLR
+                       &td_boot        &tog MAC       &td_bt_clr       &none            &none             &none          &none            &none            &none           &none
                        &kp LALT        &kp LGUI       &kp LCTRL        &kp LSHFT        &none             &kp C_PREV     &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT      &kp IME_SWITCH
             &trans     &none           &none          &none            &none            &none             &bt BT_SEL 0   &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3    &out OUT_TOG     &trans
                                                       &none            &none            &none             &kp C_STOP     &kp C_PP         &kp C_MUTE

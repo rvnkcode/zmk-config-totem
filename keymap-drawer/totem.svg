@@ -168,6 +168,7 @@ text.layer-fun.bl { fill: #d1281f; font-weight: bold; }
 <text x="35" y="0" class="key left-hand right">*</text>
 <text x="-35" y="-33" class="key left-hand tl">ㄷ</text>
 <text x="35" y="-33" class="key left-hand tr">8</text>
+<text x="-35" y="33" class="key left-hand bl">BTCLR</text>
 <text x="35" y="33" class="key left-hand br">F8</text>
 </g>
 <g transform="translate(358, 74)" class="key left-hand keypos-3">
@@ -221,7 +222,6 @@ text.layer-fun.bl { fill: #d1281f; font-weight: bold; }
 <text x="-35" y="-33" class="key right-hand tl">ㅠ</text>
 <text x="35" y="-33" class="key right-hand tr">UNDO</text>
 <text x="-35" y="33" class="key right-hand bl">BOOT</text>
-<text x="35" y="33" class="key right-hand br">BTCLR</text>
 </g>
 <g transform="translate(115, 222) rotate(-10.0)" class="key left-hand keypos-10">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key left-hand"/>
