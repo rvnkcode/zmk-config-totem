@@ -16,7 +16,7 @@
 // The two outer bottom keys are TOTEM extras (not part of Miryoku):
 //   20 = LCTRL, 31 = toggle KOR layer (keyboard layout only, OS input source untouched)
 //
-// OS input source switch: hold ESC thumb (MEDIA), tap position 6.
+// OS input source switch: hold ESC thumb (MEDIA), tap position 19.
 //
 // OS mode does not survive a power cycle: the keyboard always boots in Windows/Linux mode.
 
@@ -219,13 +219,14 @@
         };
 
         // Right hand follows Miryoku MEDIA (VI). The top row replaces Miryoku's RGB keys
-        // (TOTEM has no RGB) with the input source switch and BT_CLR (pinky, away from the index);
+        // (TOTEM has no RGB) with BT_CLR (pinky, away from the index); the input source switch
+        // sits on the home row pinky;
         // the external power toggle is left out (no ext-power on XIAO).
         media {
             display-name = "Media";
             bindings = <
-                       &td_boot        &tog MAC       &none            &none            &none             &none          &kp IME_SWITCH   &none            &none           &bt BT_CLR
-                       &kp LALT        &kp LGUI       &kp LCTRL        &kp LSHFT        &none             &kp C_PREV     &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT      &none
+                       &td_boot        &tog MAC       &none            &none            &none             &none          &none            &none            &none           &bt BT_CLR
+                       &kp LALT        &kp LGUI       &kp LCTRL        &kp LSHFT        &none             &kp C_PREV     &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT      &kp IME_SWITCH
             &trans     &none           &none          &none            &none            &none             &bt BT_SEL 0   &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3    &out OUT_TOG     &trans
                                                       &none            &none            &none             &kp C_STOP     &kp C_PP         &kp C_MUTE
             >;

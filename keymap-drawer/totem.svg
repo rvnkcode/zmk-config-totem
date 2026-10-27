@@ -199,7 +199,6 @@ text.layer-fun.bl { fill: #d1281f; font-weight: bold; }
 <text x="35" y="0" class="key right-hand right">PASTE</text>
 <text x="-35" y="-33" class="key right-hand tl">ㅓ</text>
 <text x="35" y="-33" class="key right-hand tr">PASTE</text>
-<text x="35" y="33" class="key right-hand br">HAN</text>
 </g>
 <g transform="translate(844, 37)" class="key right-hand keypos-7">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key right-hand"/>
@@ -310,6 +309,7 @@ text.layer-fun.bl { fill: #d1281f; font-weight: bold; }
 <text x="-35" y="-33" class="key right-hand tl">ㅜ</text>
 <text x="35" y="-33" class="key right-hand tr">CAPS</text>
 <text x="-35" y="33" class="key right-hand bl">ALT</text>
+<text x="35" y="33" class="key right-hand br">HAN</text>
 </g>
 <g transform="translate(45, 276) rotate(-10.0)" class="key left-hand keypos-20">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key left-hand"/>
