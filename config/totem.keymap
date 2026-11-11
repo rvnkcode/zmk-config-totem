@@ -73,6 +73,20 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        // Left shift only: balanced, so shift is held as soon as a right hand key is
+        // pressed and released, without waiting for the tapping term. The other home row
+        // mods stay tap-preferred because balanced misfires on them when typing fast.
+        hsl: home_row_shift_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
@@ -84,7 +98,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
@@ -162,7 +176,7 @@
             display-name = "Base";
             bindings = <
                        &kp Q           &kp W          &kp F            &kp P            &kp B             &kp J          &kp L            &kp U            &kp Y           &kp SQT
-                       &hml LALT A     &hml LGUI R    &hml LCTRL S     &hml LSHFT T     &kp G             &kp M          &hmr RSHFT N     &hmr LCTRL E     &hmr RGUI I     &hmr LALT O
+                       &hml LALT A     &hml LGUI R    &hml LCTRL S     &hsl LSHFT T     &kp G             &kp M          &hmr RSHFT N     &hmr LCTRL E     &hmr RGUI I     &hmr LALT O
             &kp LCTRL  &kp Z           &kp X          &kp C            &kp D            &kp V             &kp K          &kp H            &kp COMMA        &kp DOT         &kp FSLH         &tog KOR
                                                       &thumb MEDIA ESC &thumb NAV SPACE &thumb MOUSE TAB  &thumb SYM RET &thumb NUM BSPC  &thumb FUN DEL
             >;
@@ -181,7 +195,7 @@
             display-name = "Qwerty";
             bindings = <
                        &kp Q           &kp W          &kp E            &kp R            &kp T             &kp Y          &kp U            &kp I            &kp O           &kp P
-                       &hml LALT A     &hml LGUI S    &hml LCTRL D     &hml LSHFT F     &kp G             &kp H          &hmr RSHFT J     &hmr LCTRL K     &hmr RGUI L     &hmr LALT SQT
+                       &hml LALT A     &hml LGUI S    &hml LCTRL D     &hsl LSHFT F     &kp G             &kp H          &hmr RSHFT J     &hmr LCTRL K     &hmr RGUI L     &hmr LALT SQT
             &trans     &kp Z           &kp X          &kp C            &kp V            &kp B             &kp N          &kp M            &kp COMMA        &kp DOT         &kp FSLH         &trans
                                                       &trans           &trans           &trans            &trans         &trans           &trans
             >;
@@ -199,7 +213,7 @@
             display-name = "Korean";
             bindings = <
                        &kp Q           &kp W          &kp E            &kp G            &kp T             &kp Y          &kp J            &kp U            &kp I           &kp B
-                       &hml LALT A     &hml LGUI S    &hml LCTRL D     &hml LSHFT R     &kp F             &kp H          &hmr RSHFT M     &hmr LCTRL K     &hmr RGUI L     &hmr LALT N
+                       &hml LALT A     &hml LGUI S    &hml LCTRL D     &hsl LSHFT R     &kp F             &kp H          &hmr RSHFT M     &hmr LCTRL K     &hmr RGUI L     &hmr LALT N
             &trans     &kp Z           &kp X          &kp C            &kp LS(T)        &kp V             &kp O          &kp P            &kp COMMA        &kp DOT         &kp FSLH         &trans
                                                       &trans           &trans           &trans            &trans         &trans           &trans
             >;

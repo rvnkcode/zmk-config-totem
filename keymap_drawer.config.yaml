@@ -10,7 +10,7 @@ parse_config:
     "&hml LALT A": {t: A, h: ALT}
     "&hml LGUI R": {t: R, h: GUI}
     "&hml LCTRL S": {t: S, h: CTRL}
-    "&hml LSHFT T": {t: T, h: SHIFT}
+    "&hsl LSHFT T": {t: T, h: SHIFT}
     "&hmr RSHFT N": {t: N, h: SHIFT}
     "&hmr LCTRL E": {t: E, h: CTRL}
     "&hmr RGUI I": {t: I, h: GUI}
