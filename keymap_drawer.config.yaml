@@ -58,6 +58,7 @@ parse_config:
     "&kp SPACE": SPC
     "&tog MAC": MAC
     "&tog KOR": KOR
+    "&tog QWERTY": QWERTY
     "&out OUT_TOG": OUT
     "&td_bt_clr": BTCLR
     "&bt BT_SEL 0": BT0
