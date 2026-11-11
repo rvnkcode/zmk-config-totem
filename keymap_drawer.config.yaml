@@ -26,7 +26,6 @@ parse_config:
     "&kp CAPS": CAPS
     "&td_boot": BOOT
     "&kp LA(F4)": Alt+F4
-    "&kp LG(Q)": Cmd+Q
     "&kp LC(GRAVE)": Ctrl+`
     "&mkp LCLK": LCLK
     "&mkp RCLK": RCLK
