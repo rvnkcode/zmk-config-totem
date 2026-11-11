@@ -73,7 +73,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -84,7 +84,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
