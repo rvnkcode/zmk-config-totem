@@ -177,6 +177,7 @@ text.layer-fun.bl { fill: #d1281f; font-weight: bold; }
 <text x="35" y="0" class="key left-hand right">(</text>
 <text x="-35" y="-33" class="key left-hand tl">ㅎ</text>
 <text x="35" y="-33" class="key left-hand tr">9</text>
+<text x="-35" y="33" class="key left-hand bl">QWERTY</text>
 <text x="35" y="33" class="key left-hand br">F9</text>
 </g>
 <g transform="translate(437, 86)" class="key left-hand keypos-4">
@@ -567,9 +568,7 @@ text.layer-fun.bl { fill: #d1281f; font-weight: bold; }
 <g transform="translate(0, 56)">
 <g transform="translate(39, 37)" class="key  combo-separate keypos-0">
 <rect rx="6" ry="6" x="-37" y="-35" width="74" height="70" class="key  combo-separate"/>
-<text x="-10" y="0" class="key  combo-separate tap">
-<tspan x="-10" dy="-0.6em">Alt+F4</tspan><tspan x="-10" dy="1.2em">Cmd+Q</tspan>
-</text>
+<text x="-10" y="0" class="key  combo-separate tap">Alt+F4</text>
 </g>
 <g transform="translate(26, 113) rotate(-10.0)" class="key held keypos-1">
 <rect rx="6" ry="6" x="-8" y="-7" width="16" height="14" class="key held"/>
