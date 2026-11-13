@@ -80,15 +80,15 @@
             hold-trigger-on-release;
         };
 
-        // Left shift only: balanced, so shift is held as soon as a right hand key is
-        // pressed and released, without waiting for the tapping term. The other home row
-        // mods stay tap-preferred because balanced misfires on them when typing fast.
+        // Left shift only: a shorter tapping term so shift (capitals, ?) needs less
+        // waiting. Stays tap-preferred because balanced turned fast rolls like ㄱ + vowel
+        // into shift and dropped the ㄱ.
         hsl: home_row_shift_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <170>;
             quick-tap-ms = <175>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
